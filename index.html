@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>image generator</title>
+
+    <link rel="stylesheet" href="css/main.css">
+</head>
+
+<body>
+
+    <div id="game-over" class="popup-wrapper">
+        <div class="popup">
+            <div>
+                <img src="images/lost.gif">
+            </div>
+            <h2>Game Over!</h2>
+            <p>The correct word was: <span id="correct-word"></span></p>
+            <button>play again</button>
+        </div>
+    </div>
+
+    <div id="word-found" class="popup-wrapper">
+        <div class="popup">
+            <div>
+                <img src="images/victory.gif">
+            </div>
+            <h2>Congrats!</h2>
+            <p>you found the word: <span id="correct-word"></span></p>
+            <button>play again</button>
+        </div>
+    </div>
+
+    <div class="wrapper">
+        <div class="image">
+            <img id="image" src="images/hangman-0.svg">
+            <h1>hangman game</h1>
+        </div>
+        <div class="content">
+            <div id="word-letters" class="word-letters"></div>
+            <p id="hint" class="hint"></p>
+            <div class="result">
+                Incorrect guesses: <span><span id="failed-tries">0 / 6</span>
+            </div>
+            <div id="keyboard" class="letters"></div>
+        </div>
+    </div>
+    <script src="js/jquery.js"></script>
+    <script type="module" src="js/main.js"></script>
+</body>
+
+</html>
